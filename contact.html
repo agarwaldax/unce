@@ -11,7 +11,7 @@
 
     <nav data-onPage="contact">
       <div>
-        <img class="logo" src="res/logo-color.svg">
+        <a href="index.html"><img class="logo" src="res/logo-color.svg"></a>
         <img class="close togglemenubutton" src="res/close.svg">
       </div>
       <ul>
@@ -27,7 +27,7 @@
     <section class="dimpage"></section>
 
     <section class="mobNavBar">
-      <img class="logo" src="res/logo-white.svg">
+      <a href="index.html"><img class="logo" src="res/logo-white.svg"></a>
       <img class="menu togglemenubutton" src="res/menu-white.svg">
     </section>
 
@@ -52,21 +52,22 @@
       </section>
 
       <section class="form">
-        <img src="res/email.svg">
+        <img class="mail" src="res/email.svg">
         <h2>Drop us a Message</h2>
         <form id="subscribe" action="send.php" method="post">
-          <label>Name:</label>
-          <input class="name" type="text" name="name">
-          <label>Email:</label>
-          <input class="email" type="email" name="email">
-          <label>Message:</label>
-          <input id="#submit" class="submit" type="submit" value="SEND">
+          <label for="name">Name:</label>
+          <input id="name" type="text" name="name">
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" type="message" name="message"></textarea>
+          <div id="send" type="submit">SEND</div>
         </form>
       </section>
     </section>
 
     <footer>
-      <img class="logo" src="res/logo-white.svg">
+      <a href="index.html"><img class="logo" src="res/logo-white.svg"></a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -79,6 +80,7 @@
       <p>entrepreneurship@unc.edu</p>
       <p>(919) 962-5401</p>
       <span>Copyright © 2017 UNC Chapel Hill</span>
+      <span>Developed by Linker Logic Technologies</span>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
