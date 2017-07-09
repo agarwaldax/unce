@@ -46,4 +46,9 @@ $(document).ready(function(){
       }
     }
   });
+
+  $("section.content").css("min-height", $(window).height() - $("footer").height() - 65);
+  $(window).resize(function() {
+    $("section.content").css("min-height", $(window).height() - $("footer").height() - 65);
+  });
 });

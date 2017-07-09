@@ -97,6 +97,7 @@ section.mobNavBar .menu {
 
 #home header .title {
   width: 70vw;
+  max-height: 4em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,15 +116,11 @@ section.mobNavBar .menu {
   display: none;
 }
 
-#home section + section {
+#home section:not(.summary) {
   margin: 1em;
   text-align: center;
   position: relative;
-}
-
-#home section * {
-  z-index: 100;
-  position: relative;
+  overflow: hidden;
 }
 
 #home section h3 {
@@ -133,6 +130,7 @@ section.mobNavBar .menu {
   font-size: 1.6em;
   font-weight: 400;
   text-align: left;
+  margin: 0;
 }
 
 #home section p {
@@ -152,18 +150,19 @@ section.mobNavBar .menu {
   background: rgba(255, 255, 255, 0.2);
 }
 
+#home section .background {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
 #home section .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
-}
-
-#home .courses {
-  background-image: url("../res/courses_bkg.jpeg");
-  background-position: 50%, 0;
-  background-size: 250%;
-  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 #home .courses .overlay {
@@ -171,17 +170,10 @@ section.mobNavBar .menu {
   opacity: 0.85;
 }
 
-#home .courses img {
+#home .courses .info {
   max-width: 50%;
   display: block;
   margin: 1em auto;
-}
-
-#home .spaces {
-  background-image: url("../res/spaces_bkg.jpeg");
-  background-position: 50%, 0;
-  background-size: 250%;
-  background-repeat: no-repeat;
 }
 
 #home .spaces .overlay {
@@ -189,29 +181,15 @@ section.mobNavBar .menu {
   opacity: 0.70;
 }
 
-#home .activities {
-  background-image: url("../res/activities_bkg.jpeg");
-  background-position: center;
-  background-size: calc(100vh * 1.25);
-  background-repeat: no-repeat;
-}
-
 #home .activities .overlay {
   background-color: #EC6726;
   opacity: 0.70;
 }
 
-#home .activities img {
+#home .activities .info {
   max-width: 80%;
   display: block;
   margin: 1em auto;
-}
-
-#home .resources {
-  background-image: url("../res/resources_bkg.jpeg");
-  background-position: 50%, 0;
-  background-size: 250%;
-  background-repeat: no-repeat;
 }
 
 #home .resources .overlay {
@@ -219,40 +197,63 @@ section.mobNavBar .menu {
   opacity: 0.85;
 }
 
-#home .resources img {
+#home .resources .info {
   max-width: 80%;
   display: block;
   margin: 1em auto;
 }
 
-@media (min-device-width: 800px) and (min-width: 800px) {
-  #home .summary, #home section + section {
+@media (min-width: 700px) {
+  #home section:not(.summary) {
     max-width: 1100px;
     width: calc(100% - 2em);
     margin: 1em auto;
   }
   #home .summary {
+    max-width: calc(1100px - 2.4em);
     width: calc(100% - 4.4em);
+    margin: 1em auto;
+    text-align: center;
   }
   #home .summary br {
     display: block;
+  }
+  #home section h3 {
+    text-align: center;
+    padding: 1em;
   }
   #home section p {
     text-align: center;
   }
   #home section a {
-    margin-top: 6em;
-    margin-bottom: 3em;
+    margin-top: 1em;
+    margin-bottom: 2em;
   }
-  #home .courses img {
+  #home section .info {
+    max-height: 16em;
+  }
+  #home .courses .info {
     display: inline-block;
     margin: 3em 0.5em 0.5em 0.5em;
     max-width: 20%;
     width: auto;
     max-height: 5em;
   }
-  #home .activities img {
-    max-height: 16em;
+}
+
+@media (orientation: landscape) {
+  #home section .background {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+  }
+}
+
+@media (orientation: portrait) {
+  #home section .background {
+    height: 100%;
+    min-width: 100%;
+    width: auto;
   }
 }
 
@@ -262,20 +263,11 @@ section.mobNavBar .menu {
   padding: 0.5em;
 }
 
-#courses section + section {
+#courses section.elecs {
   background: #652A55;
 }
 
-#courses ul {
-  padding: 0;
-}
-
-#courses li {
-  display: block;
-  margin: 0.7em 0;
-}
-
-#courses h3 {
+#courses section h3 {
   font-weight: 400;
   font-size: 1.65em;
   display: inline-block;
@@ -290,6 +282,16 @@ section.mobNavBar .menu {
   margin-right: 0.5em;
 }
 
+#courses ul {
+  padding: 0;
+  margin: 0;
+}
+
+#courses li {
+  display: block;
+  margin: 0.7em 0;
+}
+
 #courses span {
   display: inline-block;
   color: rgba(255, 255, 255, 0.6);
@@ -301,10 +303,10 @@ section.mobNavBar .menu {
 #courses span.id {
   color: #FFFFFF;
   font-weight: 600;
+  width: 5em;
   border-left: solid medium #FFFFFF;
   padding-left: 0.4em;
   padding-right: 1em;
-  width: 5em;
 }
 
 #courses li.category {
@@ -315,27 +317,49 @@ section.mobNavBar .menu {
   font-weight: 600;
 }
 
+@media (min-width: 750px) {
+  #courses section {
+    padding: 2em;
+    padding-right: 0em;
+    max-width: 1200px;
+    width: calc(100% - 4em);
+    margin: 1em auto;
+  }
+  #courses ul {
+    width: calc(50% - 2em);
+    margin-top: 2em;
+    margin-right: 2em;
+    display: inline-block;
+  }
+  #courses li {
+    max-width: 30em;
+  }
+}
+
 #spaces {
   padding-bottom: 1em;
 }
 
 #spaces section {
   position: relative;
-  margin: 1em;
+  margin: 1em auto;
   margin-bottom: 0;
   padding: 1em;
   padding-bottom: 0;
   overflow: hidden;
   box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.35);
   height: auto;
+  width: calc(100% - 4em);
 }
 
 #spaces section p {
+  margin: auto;
   margin-top: 4em;
   font-size: 1em;
   letter-spacing: 0.05em;
   line-height: 1.6em;
   text-align: center;
+  max-width: 550px;
 }
 
 #spaces section a {
@@ -351,7 +375,7 @@ section.mobNavBar .menu {
 
 #spaces section .background {
   position: absolute;
-  max-height: 100%;
+  height: 100%;
   min-width: 100%;
   top: 50%;
   left: 50%;
@@ -396,7 +420,7 @@ section.mobNavBar .menu {
   margin-top: 2em;
 }
 
-@media (min-device-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #spaces {
     text-align: center;
   }
@@ -406,8 +430,8 @@ section.mobNavBar .menu {
     width: calc(25% - 3.5em);
     max-width: 400px;
     display: inline-block;
-    padding-bottom: 8em;
-    margin-top: 2em;
+    padding-bottom: 6em;
+    margin-top: 3em;
   }
   #spaces section a {
     position: absolute;
@@ -495,6 +519,8 @@ section.mobNavBar .menu {
 #activitiesSubpage section {
   padding: 1em;
   color: #000000;
+  max-width: 700px;
+  margin: auto;
 }
 
 #activitiesSubpage section p {
@@ -519,7 +545,7 @@ section.mobNavBar .menu {
   width: auto;
 }
 
-@media (min-device-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   #activities {
     text-align: center;
   }
@@ -550,7 +576,7 @@ section.mobNavBar .menu {
   padding: 0;
 }
 
-@media (min-device-width: 700px) and (min-width: 700px) {
+@media (min-width: 700px) {
   #resources section img {
     max-width: 1400px;
     width: calc(100% - 4em);
@@ -684,6 +710,7 @@ section.mobNavBar .menu {
 footer {
   background: #1F2C35;
   position: relative;
+  bottom: 0;
   width: calc(100% - 2em);
   color: #FFFFFF;
   padding: 1em;
@@ -708,11 +735,49 @@ footer p {
 
 footer span {
   display: block;
-  margin: auto;
-  margin-top: 2em;
+  margin: 0.5em auto;
   text-align: center;
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.8em;
+}
+
+footer .copyright {
+  margin-top: 2em;
+}
+
+footer br {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  footer {
+    padding: 2em;
+    width: calc(100% - 4em);
+  }
+  footer div {
+    margin: auto;
+    max-width: 1200px;
+  }
+  footer li {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer div {
+    max-width: none;
+    text-align: center;
+  }
+  footer ul {
+    display: inline-block;
+    margin-left: 2em;
+  }
+  footer span {
+    display: inline-block;
+  }
+  footer br {
+    display: block;
+  }
 }
 
 body, html {
@@ -720,6 +785,7 @@ body, html {
   padding: 0;
   font-family: "Nunito", sans-serif;
   color: #FFFFFF;
+  position: relative;
 }
 
 a {
@@ -762,9 +828,6 @@ section header .background {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  min-height: 100%;
-  max-height: 100%;
-  min-width: 100vw;
 }
 
 section header h1 {
@@ -789,6 +852,16 @@ section.dimpage {
 
 @media (orientation: landscape) {
   section header .background {
-    max-height: none;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+  }
+}
+
+@media (orientation: portrait) {
+  section header .background {
+    height: 100%;
+    min-width: 100%;
+    width: auto;
   }
 }
