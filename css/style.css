@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,600");
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,500,600,700");
 nav {
   margin: 0;
   background: #1F2C35;
@@ -42,10 +42,11 @@ nav li {
   display: block;
   color: #FFFFFF;
   font-size: 1.4rem;
+  font-weight: 400;
   padding: 1.2em 0.5em 1.2em 0.5em;
 }
 
-@media (min-device-width: 900px) and (min-width: 900px) {
+@media (min-width: 900px) {
   nav {
     right: 0;
     padding-right: 2em;
@@ -63,7 +64,11 @@ nav li {
   }
   nav li {
     display: inline-block;
-    padding: 0.5em;
+    padding: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.08em;
   }
   nav a.color {
     color: #5C839F;
@@ -85,23 +90,46 @@ section.mobNavBar .menu {
   right: 1.7em;
 }
 
-@media (min-device-width: 1000px) and (min-width: 900px) {
+@media (min-width: 900px) {
   section.mobNavBar .menu {
     display: none;
   }
 }
 
 #home header {
-  height: 75vh;
+  height: 100vh;
 }
 
 #home header .title {
   width: 70vw;
-  max-height: 4em;
+  max-height: 3em;
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#home header .background {
+  object-fit: cover;
+}
+
+#home header .overlay {
+  background-image: url("../res/home-banner-video-overlay.png");
+  background-color: rgba(1, 87, 155, 0.8);
+}
+
+#home header h1 {
+  top: 35%;
+}
+
+#home header h2 {
+  width: calc(100% -1em);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: calc(35% + 1.3em);
+  font-weight: 400;
+  font-size: 2.8em;
 }
 
 #home .summary {
@@ -110,6 +138,8 @@ section.mobNavBar .menu {
   padding: 1.2em;
   width: auto;
   font-size: 1.1em;
+  letter-spacing: 0.06em;
+  font-weight: 400;
 }
 
 #home .summary br {
@@ -257,6 +287,12 @@ section.mobNavBar .menu {
   }
 }
 
+@media (min-height: 1000px) {
+  #home header {
+    max-height: none;
+  }
+}
+
 #courses section {
   background: #00626B;
   margin: 1em;
@@ -360,6 +396,7 @@ section.mobNavBar .menu {
   line-height: 1.6em;
   text-align: center;
   max-width: 550px;
+  font-weight: 400;
 }
 
 #spaces section a {
@@ -435,7 +472,7 @@ section.mobNavBar .menu {
   }
   #spaces section a {
     position: absolute;
-    width: 100%;
+    width: calc(100% - 1em);
     bottom: 0;
   }
 }
@@ -562,6 +599,7 @@ section.mobNavBar .menu {
 
 #resources section {
   margin: 1em;
+  position: relative;
 }
 
 #resources section img {
@@ -582,9 +620,27 @@ section.mobNavBar .menu {
     width: calc(100% - 4em);
     margin: 2em auto;
   }
+  #resources a {
+    position: absolute;
+    bottom: 6.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 8em);
+    max-width: 1100px;
+    height: 11%;
+  }
   #resources a img {
     display: none;
   }
+}
+
+#contact h2 {
+  font-weight: 500;
+  color: #1F2C35;
+  font-size: 1.8em;
+  margin: 0 0 1em 0.5em;
+  display: inline-block;
+  letter-spacing: 0.07em;
 }
 
 #contact h3 {
@@ -595,6 +651,7 @@ section.mobNavBar .menu {
 #contact .map {
   background: #1F2C35;
   margin: 1em;
+  text-align: center;
 }
 
 #contact .map iframe {
@@ -604,12 +661,13 @@ section.mobNavBar .menu {
 }
 
 #contact .map ul {
+  display: inline-block;
   padding: 0;
-  margin: 1em 0;
+  margin: 1em auto;
+  text-align: left;
 }
 
 #contact .map li {
-  display: block;
   display: inline-block;
   vertical-align: top;
 }
@@ -653,14 +711,6 @@ section.mobNavBar .menu {
   height: 0.9em;
 }
 
-#contact h2 {
-  font-weight: 600;
-  font-size: 1.8em;
-  margin: 0 0 1em 0.5em;
-  display: inline-block;
-  letter-spacing: 0.07em;
-}
-
 #contact .mail {
   display: inline-block;
   height: 1.4em;
@@ -679,7 +729,7 @@ section.mobNavBar .menu {
 #contact label {
   text-transform: uppercase;
   display: block;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 #contact input, #contact textarea {
@@ -690,7 +740,7 @@ section.mobNavBar .menu {
   margin: 0.7rem 0;
   padding: 0.2em;
   font-size: 1.4rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Zilla Slab", sans-serif;
 }
 
 #contact textarea {
@@ -707,6 +757,47 @@ section.mobNavBar .menu {
   font-size: 1.3em;
 }
 
+@media (min-width: 800px) {
+  #contact h3 {
+    font-weight: 600;
+  }
+  #contact .map {
+    max-width: calc(800px - 2em);
+    margin: 3em auto auto auto;
+    background: none;
+    color: #000000;
+    text-align: center;
+  }
+  #contact .map p {
+    color: #000000;
+    font-size: 1.1em;
+  }
+  #contact .map iframe {
+    width: calc(50% - 2em);
+    padding: 1em;
+    display: inline-block;
+    vertical-align: top;
+  }
+  #contact .map ul {
+    margin: 3em auto;
+    width: calc(50% - 1em);
+    display: inline-block;
+    vertical-align: super;
+    text-align: left;
+  }
+  #contact .map a {
+    display: inline-block;
+    margin-left: 40%;
+    font-size: 0.9em;
+    transform: translateY(-7em);
+    background: #1F2C35;
+  }
+  #contact .form {
+    max-width: calc(400px - 2em);
+    margin: 2em auto 5em auto;
+  }
+}
+
 footer {
   background: #1F2C35;
   position: relative;
@@ -714,6 +805,7 @@ footer {
   width: calc(100% - 2em);
   color: #FFFFFF;
   padding: 1em;
+  font-weight: 400;
 }
 
 footer ul {
@@ -725,7 +817,7 @@ footer li {
   display: block;
   padding: 0.5em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.1em;
 }
 
@@ -783,7 +875,7 @@ footer br {
 body, html {
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Zilla Slab", sans-serif;
   color: #FFFFFF;
   position: relative;
 }
@@ -813,6 +905,7 @@ section header {
   position: relative;
   overflow: hidden;
   width: 100%;
+  text-align: center;
 }
 
 section header .overlay {
@@ -831,7 +924,8 @@ section header .background {
 }
 
 section header h1 {
-  font-size: 3em;
+  width: calc(100% - 2em);
+  font-size: 2.2em;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -863,5 +957,11 @@ section.dimpage {
     height: 100%;
     min-width: 100%;
     width: auto;
+  }
+}
+
+@media (min-height: 1000px) {
+  section header {
+    max-height: 500px;
   }
 }

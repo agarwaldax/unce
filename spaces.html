@@ -43,7 +43,7 @@
         <div class="shadow"></div>
         <img class="logo" src="res/cube.svg">
         <p>CUBE provides a 24/7 co-working space, mentorship, and support services for accepted social ventures as well as free workshops offered to the public.</p>
-        <a href="">Learn More</a>
+        <a href="http://socialinnovation.unc.edu/spaces/cube/">Learn More</a>
       </section>
       
       <section class="ghi">
@@ -51,7 +51,7 @@
         <div class="shadow"></div>
         <img class="logo" src="res/ghi.svg">
         <p>Gillings Health Innovation Labs provides funding and support to public health innovators with proposals that demonstrate high-impact potential.</p>
-        <a href="">Learn More</a>
+        <a href="http://socialinnovation.unc.edu/spaces/gillings-innovation-labs/">Learn More</a>
       </section>
       
       <section class="mspace">
@@ -67,7 +67,7 @@
         <div class="shadow"></div>
         <img class="logo" src="res/rhub.svg">
         <p>Research Hub provides training in equipment and software so innovators may find, analyze, and visualize data sets, collaborate on research, and develop design ideas.</p>
-        <a href="">Learn More</a>
+        <a href="http://socialinnovation.unc.edu/spaces/research-hub/">Learn More</a>
       </section>
     </section>
 
@@ -91,16 +91,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/nav.js"></script>
     <script>
-      var newHeight = Math.max.apply(null, $("#spaces section").map(function () {
-        return $(this).height();
-      }).get());
-      if ($("#spaces").width() >= 980) $("#spaces section").css("height",newHeight);
-      $(window).resize(function() {
-        if ($("#spaces").width() >= 980) {
-          $("#spaces section").css("height",newHeight);
-        } else $("#spaces section").css("height", "auto");
+      $(document).ready(function() {
+        var newHeight = Math.max.apply(null, $("#spaces section").map(function () {
+          return $(this).height();
+        }).get());
+        
+        if ($("#spaces").width() >= 980) $("#spaces section").css("height",newHeight);
+        $(window).resize(function() {
+          if ($("#spaces").width() >= 980) {
+            $("#spaces section").css("height",newHeight);
+          } else $("#spaces section").css("height", "auto");
+        });
       });
-      
     </script>
   </body>
 </html>
