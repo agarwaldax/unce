@@ -293,6 +293,12 @@ section.mobNavBar .menu {
   }
 }
 
+@media (min-width: 1000px) and (min-height: 600px) {
+  #home header h1 {
+    font-size: 2.2em;
+  }
+}
+
 #courses section {
   background: #00626B;
   margin: 1em;
@@ -455,6 +461,60 @@ section.mobNavBar .menu {
 
 #spaces .rhub .logo {
   margin-top: 2em;
+}
+
+#spacesSubpage header {
+  padding-top: 5em;
+  height: 16em;
+  max-width: 100%;
+}
+
+#spacesSubpage header img {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-height: calc(100% - 4em);
+  padding: 1em;
+}
+
+#spacesSubpage header h1 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  top: auto;
+  left: 1em;
+  bottom: 0;
+  transform: none;
+}
+
+#spacesSubpage section {
+  padding: 1em;
+  color: #000000;
+  max-width: 700px;
+  margin: auto;
+}
+
+#spacesSubpage section h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+#spacesSubpage section p {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+#spacesSubpage section a {
+  display: inline-block;
+  background: #1F2C35;
+  padding: 0.5em 1em;
+  margin: 1em 1em 0 0;
+}
+
+#spacesSubpage section div {
+  width: 100%;
+  height: 1em;
 }
 
 @media (min-width: 1000px) {
@@ -960,8 +1020,8 @@ section.dimpage {
   }
 }
 
-@media (min-height: 1000px) {
-  section header {
-    max-height: 500px;
+@media (min-width: 1000px) and (min-height: 600px) {
+  section header h1 {
+    font-size: 4em;
   }
 }
