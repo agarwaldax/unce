@@ -1,0 +1,71 @@
+nav
+  margin: 0
+  background: $dkblue
+  position: fixed
+  right: -20em
+  top: 0
+  height: 100vh
+  width: 70vw
+  min-width: 16em
+  max-width: 20em
+  transition: transform 0.5s
+  z-index: 10000
+
+nav.toggle
+  transform: translateX(-20em)
+
+nav div
+  background: $white
+  height: 4em
+  line-height: 4em
+  padding: 1em
+
+nav img.close
+  display: inline-block
+  position: absolute
+  right: 1.5em
+  top: calc((4em - 1.3em) / 2 + 1em)
+  height: 1.3em
+
+nav ul
+  padding: 0em 1em 0em 1em
+  max-height: calc(100vh - 6em)
+  overflow-y: auto
+nav li
+  display: block
+  color: $white
+  font-size: $font-med
+  font-weight: $regular
+  padding: 1.2em 0.5em 1.2em 0.5em
+
+@media (min-width: 900px)
+  nav
+    right: 0
+    padding-right: 2em
+    text-align: right
+    min-width: 700px
+    height: 5em
+    background: none
+  nav div
+    display: none
+  nav ul
+    display: inline-block
+    padding: 0
+    margin: 0
+    height: 100%
+    overflow: hidden
+  nav li
+    vertical-align: middle
+    display: inline-block
+    font-weight: $semibold
+    text-transform: uppercase
+    font-size: 0.85em
+    letter-spacing: 0.08em
+  nav a:hover
+    transform: scale(1.3) translateY(0.5em)
+  nav a
+    display: inline-block
+    padding: 1.1em 1em
+    transition: 0.5s transform
+  nav a.color
+    color: $blue  

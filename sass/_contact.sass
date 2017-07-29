@@ -1,0 +1,128 @@
+#contact h2
+  font-weight: $semibold
+  color: $dkblue
+  font-size: 1.8em
+  margin: 0 0 1em 0.5em
+  display: inline-block
+  letter-spacing: 0.07em
+#contact h3
+  font-weight: $regular
+  margin: 0
+
+#contact .map
+  background: $dkblue
+  margin: 1em
+  text-align: center
+#contact .map iframe
+  width: calc(100% - 0.4em)
+  height: 20em
+  padding: 0.2em
+#contact .map ul
+  display: inline-block
+  padding: 0
+  margin: 1em auto
+  text-align: left
+#contact .map li
+  display: inline-block
+  vertical-align: top
+#contact .map .icon
+  width: 4em
+  max-width: 20%
+  text-align: center
+#contact .map .icon img
+  display: inline-block
+  width: 2em
+  max-width: 40%
+#contact .map .info
+  width: calc(80% - 1em)
+  padding-right: 1em
+#contact .map p
+  color: rgba(255, 255, 255, 0.6)
+  font-size: 0.8em
+  font-weight: $regular
+  letter-spacing: 0.03em
+#contact .map a
+  text-align: center
+  display: block
+  text-transform: uppercase
+  background: rgba(0, 0, 0, 0.5)
+  padding: 0.8em 1em
+#contact .map a img
+  display: inline-block
+  transform: translateY(0.1em)
+  margin-left: 0.3em
+  height: 0.9em
+
+#contact .mail
+  display: inline-block
+  height: 1.4em
+#contact .form
+  color: $black
+  margin: 2em 1em
+  text-align: center
+#contact form
+  text-align: left
+#contact label
+  text-transform: uppercase
+  display: block
+  font-weight: $semibold
+#contact input, #contact textarea
+  -webkit-appearance: none
+  border-radius: 0
+  border-width: 0.12rem
+  border-color: $dkblue
+  display: block
+  width: calc(100% - 0.4em - 0.24rem)
+  margin: 0.7rem 0
+  padding: 0.2em
+  font-size: 1.4rem
+  font-family: $font-stack
+#contact textarea
+  height: 4em
+#contact #send
+  text-align: center
+  background: $dkblue
+  color: $white
+  margin: 1.5em 0 0 0
+  padding: 0.5em 0.5em
+  font-weight: $bold
+  font-size: 1.3em
+
+@media (min-width: 800px)
+  #contact h3
+    font-weight: $bold
+  #contact .map
+    max-width: calc(800px - 2em)
+    margin: 3em auto auto auto
+    background: none
+    color: $black
+    text-align: center
+  #contact .map p
+    color: $black
+    font-size: 1.1em
+  #contact .map iframe
+    width: calc(50% - 2em)
+    padding: 1em
+    display: inline-block
+    vertical-align: top
+  #contact .map ul
+    margin: 3em auto
+    width: calc(50% - 1em)
+    display: inline-block
+    vertical-align: super
+    text-align: left
+  #contact .map a
+    display: inline-block
+    margin-left: 40%
+    font-size: 0.9em
+    transform: translateY(-7em)
+    background: $dkblue
+
+  #contact .form
+    max-width: calc(400px - 2em)
+    margin: 2em auto 5em auto
+  #contact #send
+    cursor: pointer
+    transition: 0.5s background
+  #contact #send:hover
+    background: $blue

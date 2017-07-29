@@ -1,0 +1,63 @@
+#courses section
+  background: $majreqs
+  margin: 1em
+  padding: 0.5em
+#courses section.elecs
+  background: $elecs
+#courses section h3
+  font-weight: $regular
+  font-size: 1.65em
+  display: inline-block
+  vertical-align: middle
+  margin: 0
+#courses section img
+  height: 2em
+  display: inline-block
+  vertical-align: middle
+  margin-right: 0.5em
+
+#courses ul
+  padding: 0
+  margin: 0
+#courses li
+  display: block
+  margin: 0.7em 0
+#courses span
+  display: inline-block
+  color: rgba(255, 255, 255, 0.6)
+  font-weight: $regular
+  width: calc(100% - 7em)
+  vertical-align: top
+#courses span.id
+  color: $white
+  font-weight: $bold
+  width: 5em
+  border-left: solid medium $white
+  padding-left: 0.4em
+  padding-right: 1em
+#courses li.category
+  color: $white
+  display: block
+  text-transform: uppercase
+  border-bottom: solid medium $white
+  font-weight: $bold
+#courses li.first
+  margin-top: 2em
+
+@media (min-width: 750px)
+  #courses section
+    padding: 2em
+    padding-right: 0em
+    max-width: 1200px
+    width: calc(100% - 4em)
+    margin: 1em auto
+  #courses ul
+    width: calc(50% - 2em)
+    margin-top: 2em
+    margin-right: 2em
+    display: inline-block
+    vertical-align: top
+  #courses li
+    max-width: 30em
+  #courses li.category.first
+    margin-top: 0

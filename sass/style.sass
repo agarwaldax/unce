@@ -1,0 +1,86 @@
+@import fonts
+@import colors
+@import nav
+@import mobnavbar
+@import home
+@import courses
+@import spaces
+@import activities
+@import resources
+@import contact
+@import footer
+  
+body, html
+  margin: 0
+  padding: 0
+  font-family: $font-stack
+  color: $white
+  position: relative
+  
+a
+  color: $white
+  text-decoration: none
+  
+img.logo
+  height: 3rem
+  vertical-align: middle
+
+section.content
+  position: relative
+  top: 0
+  left: 0
+  overflow-y: auto
+  overflow-x: hidden
+  width: 100%
+  z-index: 0
+
+section header
+  height: 50vh
+  position: relative
+  overflow: hidden
+  width: 100%
+  text-align: center
+section header .overlay
+  position: absolute
+  height: 100%
+  width: 100%
+  background-color: $dkblue
+  opacity: 0.8
+section header .background
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+section header h1
+  width: calc(100% - 2em)
+  font-size: 2.2em
+  position: absolute
+  top: 40%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-weight: $regular
+
+section.dimpage
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 9999
+  background: rgba(0, 0, 0, 0.6)
+  display: none
+
+@media (orientation: landscape)
+  section header .background
+    width: 100%
+    min-height: 100%
+    height: auto
+@media (orientation: portrait)
+  section header .background
+    height: 100%
+    min-width: 100%
+    width: auto
+
+@media (min-width: 1000px) and (min-height: 600px)
+  section header h1
+    font-size: 4em

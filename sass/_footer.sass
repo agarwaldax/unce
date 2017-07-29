@@ -1,0 +1,50 @@
+footer
+  background: $dkblue
+  position: relative
+  bottom: 0
+  width: calc(100% - 2em)
+  color: $white
+  padding: 1em
+  font-weight: $regular
+footer ul
+  padding: 0
+  margin: 0.5em 0 2em 0
+footer li
+  display: block
+  padding: 0.5em
+  text-transform: uppercase
+  font-weight: $regular
+  font-size: 1.1em
+footer p
+  margin: 0.3em
+footer span
+  display: block
+  margin: 0.5em auto
+  text-align: center
+  color: rgba(255, 255, 255, 0.6)
+  font-size: 0.8em
+footer .copyright
+  margin-top: 2em
+footer br
+  display: none
+
+@media (min-width: 600px)
+  footer
+    padding: 2em
+    width: calc(100% - 4em)
+  footer div
+    margin: auto
+    max-width: 1200px
+  footer li
+    display: inline-block
+@media (min-width: 1200px)
+  footer div
+    max-width: none
+    text-align: center
+  footer ul
+    display: inline-block
+    margin-left: 2em
+  footer span
+    display: inline-block
+  footer br
+    display: block

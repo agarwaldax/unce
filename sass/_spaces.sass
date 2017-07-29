@@ -1,0 +1,130 @@
+#spaces
+  padding-bottom: 1em
+#spaces section
+  position: relative
+  margin: 1em auto
+  margin-bottom: 0
+  padding: 1em
+  padding-bottom: 0
+  overflow: hidden
+  box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.35)
+  height: auto
+  width: calc(100% - 4em)
+#spaces section p
+  margin: auto
+  margin-top: 4em
+  font-size: 1em
+  letter-spacing: 0.05em
+  line-height: 1.6em
+  text-align: center
+  max-width: 550px
+  font-weight: $regular
+#spaces section a
+  display: block
+  margin: 2em -1em 0 -1em
+  padding: 0.75em
+  padding-top: 0.5em
+  font-size: 1.4em
+  font-weight: $regular
+  text-align: center
+  background: rgba(0, 0, 0, 0.5)
+#spaces section .background
+  position: absolute
+  height: 100%
+  min-width: 100%
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  z-index: -10
+#spaces section .shadow
+  position: absolute
+  height: 100%
+  width: 100%
+  z-index: -11
+  background: #BDBDBD
+#spaces .logo
+  display: block
+  margin: auto
+  margin-top: 1em
+  max-height: 8em
+  max-width: 80%
+  height: auto
+
+#spaces .cube
+  background: rgba(104, 188, 91, 0.9)
+#spaces .ghi
+  background: rgba(44, 117, 201, 0.9)
+#spaces .mspace
+  background: rgba(135, 56, 113, 0.9)
+#spaces .rhub
+  background: rgba(194, 65, 65, 0.9)
+#spaces .rhub .logo
+  margin-top: 2em
+
+
+#spacesSubpage header
+  padding-top: 5em
+  height: 16em
+  max-width: 100%
+#spacesSubpage header img
+  display: block
+  margin: auto
+  width: 80%
+  max-height: calc(100% - 4em)
+  padding: 1em
+#spacesSubpage header h1
+  font-size: 1.1em
+  text-transform: uppercase
+  font-weight: $bold
+  top: auto
+  left: 1em
+  bottom: 0
+  transform: none
+#spacesSubpage section
+  padding: 1em
+  color: $black
+  max-width: 700px
+  margin: auto
+#spacesSubpage section h3
+  font-size: 1.5em
+  font-weight: $bold
+#spacesSubpage section p
+  margin: 0
+  font-size: 1.1em
+  line-height: 1.8em
+#spacesSubpage section a
+  display: inline-block
+  background: $dkblue
+  padding: 0.5em 1em
+  margin: 1em 1em 0 0
+#spacesSubpage section div
+  width: 100%
+  height: 1em
+
+
+@media (min-width: 1000px)
+  #spaces
+    text-align: center
+  #spaces section
+    font-size: 90%
+    margin: 1em 0.5em
+    width: calc(25% - 3.5em)
+    max-width: 400px
+    display: inline-block
+    padding-bottom: 6em
+    margin-top: 3em
+  #spaces section a
+    position: absolute
+    width: calc(100% - 1em)
+    bottom: 0
+
+// @media (orientation: landscape)
+//   #spaces section .background
+//     width: 100%
+//     min-height: 100%
+//     height: auto
+// @media (orientation: portrait)
+//   #spaces section .background
+//     height: 100%
+//     min-width: 100%
+//     width: auto

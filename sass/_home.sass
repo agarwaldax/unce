@@ -1,0 +1,204 @@
+#home header
+  height: 100vh
+#home header .title
+  width: 70vw
+  max-height: 3em
+  position: absolute
+  top: 90%
+  left: 50%
+  transform: translate(-50%, -50%)
+#home header .background
+  object-fit: cover
+#home header .overlay
+  background-image: url("../res/home-banner-video-overlay.png")
+  background-color: rgba(1,87,155 ,0.8)
+#home header h1
+  top: 35%
+#home header h2
+  width: calc(100% -1em)
+  position: absolute
+  left: 50%
+  transform: translate(-50%, -50%)
+  top: calc(35% + 1.3em)
+  font-weight: 400
+  font-size: 2.8em
+  
+#home .summary
+  background: #5C839F
+  margin: 1em
+  padding: 1.2em
+  width: auto
+  font-size: 1.1em
+  letter-spacing: 0.06em
+  font-weight: $regular
+#home .summary br
+  display: none
+
+#home section:not(.summary)
+  margin: 1em
+  text-align: center
+  position: relative
+  overflow: hidden
+#home section h3
+  display: block
+  background: rgba(0, 0, 0, 0.5)
+  padding: 0.3em
+  font-size: 1.6em
+  font-weight: $regular
+  text-align: left
+  margin: 0
+#home section p
+  font-weight: $regular
+  font-size: 1.15em
+  padding: 1em
+  text-align: middle
+#home section a
+  display: inline-block
+  padding: 0.6em 1.4em 0.6em 1.4em
+  font-size: 1.1em
+  font-weight: $bold
+  text-transform: uppercase
+  margin-bottom: 1em
+  background: rgba(255, 255, 255, 0.2)
+#home section .background
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  z-index: -2
+#home section .overlay
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: -1
+
+#home .courses .overlay
+  background-color: $courses
+  opacity: 0.85
+#home .courses .numbersGraphic
+  max-width: 50%
+  font-size: 1.4em
+  font-weight: $regular
+  display: block
+  margin: 1em auto
+  padding: 0.5em 1em
+  border: solid thick rgba(255,255,255,0.5)
+#home .courses .numbersGraphic span
+  font-size: 1.8em
+  
+#home .spaces .overlay
+  background-color: $spaces
+  opacity: 0.70
+#home .spaces .slider
+  display: block
+  margin: 2em auto
+  height: 400px
+  width: 540px
+  position: relative
+#home .spaces .slider img
+
+
+#home .activities .overlay
+  background-color: $activities
+  opacity: 0.70
+#home .activities .info
+  max-width: 80%
+  display: block
+  margin: 1em auto
+  
+#home .resources .overlay
+  background-color: $resources
+  opacity: 0.85
+#home .resources .info
+  max-width: 80%
+  display: block
+  margin: 1em auto
+
+@media (min-width: 700px)
+  #home section:not(.summary)
+    max-width: 1100px
+    width: calc(100% - 2em)
+    margin: 6em auto
+  #home section .background
+    display: none
+  #home section .overlay
+    height: 0.5em
+    z-index: 0
+    width: 15em
+    left: 50%
+    transform: translateX(-50%)
+  #home .summary
+    max-width: calc(1100px - 2.4em)
+    width: calc(100% - 4.4em)
+    margin: 1em auto
+    text-align: center
+  #home .summary br
+    display: block
+  #home section h3
+    text-align: center
+    padding: 0.5em
+    padding-top: 0.8em
+    z-index: -1
+    color: $dkblue
+    background: none
+    font-weight: $bold
+  #home section p
+    text-align: center
+    color: $black
+  #home section a
+    margin-top: 1em
+    margin-bottom: 2em
+    opacity: 0.8
+    transition: 0.5s opacity
+  #home section a:hover
+    opacity: 1
+  #home .courses a
+    background: $courses
+  #home .spaces a
+    background: $spaces
+  #home .activities a
+    background: $activities
+  #home .resources a
+    background: $resources
+  #home section .info
+    max-height: 16em
+  #home .courses .info
+    display: inline-block
+    margin: 3em 0.5em 0.5em 0.5em
+    max-width: 20%
+    width: auto
+    max-height: 5em
+  #home .activities .info .cls-1
+    fill: $activities
+  #home .activities .info .cls-2
+    fill: $white
+  #home .resources .info .cls-1
+    fill: $resources
+  #home .courses .numbersGraphic
+    color: $courses
+    display: inline-block
+    margin: 2em 1em 1em 1em
+    font-size: 1.2em
+    padding: 0.5em 1.5em
+    width: 16%
+    max-width: 6em
+    border-color: rgba(54,179,168,0.5)
+
+@media (orientation: landscape)
+  #home section .background
+    width: 100%
+    min-height: 100%
+    height: auto
+@media (orientation: portrait)
+  #home section .background
+    height: 100%
+    min-width: 100%
+    width: auto
+
+@media (min-height: 1000px)
+  #home header
+    max-height: none
+
+@media (min-width: 1000px) and (min-height: 600px)
+  #home header h1
+    font-size: 2.2em
