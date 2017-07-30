@@ -9,23 +9,64 @@
   transform: translate(-50%, -50%)
 #home header .background
   object-fit: cover
+  position: fixed
+  z-index: -100
 #home header .overlay
   background-image: url("../res/home-banner-video-overlay.png")
   background-color: rgba(1,87,155 ,0.8)
-#home header h1
-  top: 35%
-#home header h2
-  width: calc(100% -1em)
+#home header .content
   position: absolute
+  top: 45%
+  width: 100%
+  transform: translateY(-50%)
+  text-align: center
+#home header h1
+  position: relative
+  display: block
+  font-size: 1.2em
+  margin: 0
+#home header h2
+  position: relative
+  display: block
+  font-weight: $regular
+  margin: 0
+  font-size: 1.9em
+#home header .option
+  display: block
+  padding: 0.6em 1.2em
+  margin: 2em auto 0 auto
+  border: solid white 0.095em
+  transition: 0.5s all
+  max-width: 10em
+#home header .option:hover
+  color: $dkblue
+  cursor: pointer
+  font-weight: $semibold
+  background: $white
+  border-color: $white
+#home header .arrow
+  position: absolute
+  bottom: 2em
   left: 50%
-  transform: translate(-50%, -50%)
-  top: calc(35% + 1.3em)
-  font-weight: 400
-  font-size: 2.8em
+  font-size: 2em
+  padding: 1em 0
+  transition: 0.5s all
+#home header .arrow:hover
+  cursor: pointer
+  padding-top: 2em
+  bottom: 1em
+
   
+#home .sectionbkg
+  background: $white
+  padding: 1px 0
+  position: relative
+  z-index: -4
+
 #home .summary
   background: #5C839F
   margin: 1em
+  width: auto
   padding: 1.2em
   width: auto
   font-size: 1.1em
@@ -116,9 +157,9 @@
 
 @media (min-width: 700px)
   #home section:not(.summary)
-    max-width: 1100px
-    width: calc(100% - 2em)
-    margin: 6em auto
+    width: 100%
+    padding: 6em 0
+    margin: 0
   #home section .background
     display: none
   #home section .overlay
@@ -128,37 +169,36 @@
     left: 50%
     transform: translateX(-50%)
   #home .summary
-    max-width: calc(1100px - 2.4em)
-    width: calc(100% - 4.4em)
-    margin: 1em auto
+    width: 100%
+    margin: 0
+    padding: 2em 0
     text-align: center
   #home .summary br
     display: block
   #home section h3
     text-align: center
     padding: 0.5em
+    font-size: 3em
     padding-top: 0.8em
     z-index: -1
-    color: $dkblue
     background: none
-    font-weight: $bold
+    font-weight: $semibold
   #home section p
     text-align: center
-    color: $black
   #home section a
     margin-top: 1em
     margin-bottom: 2em
-    opacity: 0.8
+    opacity: 0.7
     transition: 0.5s opacity
   #home section a:hover
     opacity: 1
-  #home .courses a
+  #home .courses
     background: $courses
-  #home .spaces a
+  #home .spaces
     background: $spaces
-  #home .activities a
+  #home .activities
     background: $activities
-  #home .resources a
+  #home .resources
     background: $resources
   #home section .info
     max-height: 16em
@@ -168,21 +208,20 @@
     max-width: 20%
     width: auto
     max-height: 5em
-  #home .activities .info .cls-1
-    fill: $activities
-  #home .activities .info .cls-2
-    fill: $white
-  #home .resources .info .cls-1
-    fill: $resources
   #home .courses .numbersGraphic
-    color: $courses
     display: inline-block
     margin: 2em 1em 1em 1em
     font-size: 1.2em
     padding: 0.5em 1.5em
     width: 16%
     max-width: 6em
-    border-color: rgba(54,179,168,0.5)
+  #home .sectionbkg
+    padding: 0
+  #home header .option
+    display: inline-block
+    margin: 3em 1em 0 1em
+    max-width: none
+    
 
 @media (orientation: landscape)
   #home section .background
@@ -201,4 +240,6 @@
 
 @media (min-width: 1000px) and (min-height: 600px)
   #home header h1
-    font-size: 2.2em
+    font-size: 2em
+  #home header h2
+    font-size: 3em

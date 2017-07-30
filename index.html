@@ -40,10 +40,15 @@
           <source src="res/bkg.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
-        <h1>Get Involved in UNC</h1>
-        <h2>Entrepreneurship</h2>
+        <div class="content">
+          <h1>Get Involved in UNC</h1>
+          <h2>Entrepreneurship</h2>
+          <div class="option scroll">Learn More</div>
+          <a href="courses.html"><div class="option">View Courses</div></a>
+        </div>
+        <div class="arrow scroll">&#8675</div>
       </header>
-
+      <div class="sectionbkg">
       <section class="summary">
         We're a campus-wide program supporting <br> UNC entrepreneurship and innovation.
       </section>
@@ -52,9 +57,9 @@
         <img class="background" src="res/courses_bkg.jpeg">
         <div class="overlay"></div>
         <h3>Courses</h3>
-        <div class="numbersGraphic"><span>10</span><br>departments</div>
-        <div class="numbersGraphic"><span>112<br></span>courses</div>
-        <div class="numbersGraphic"><span>1300</span><br>students</div>
+        <div class="numbersGraphic"><span class="count">10</span><br>departments</div>
+        <div class="numbersGraphic"><span class="count">112</span><br>courses</div>
+        <div class="numbersGraphic"><span class="count">1300</span><br>students</div>
         <p>Explore the guide on what to take while at UNC to become an entrepreneurship expert.</p>
         <a href="courses.html">Learn More</a>
       </section>
@@ -93,6 +98,7 @@
            or just get technical help.</p>
         <a href="resources.html">Learn More</a>
       </section>
+      </div>
     </section>
 
     <footer><div>
@@ -121,6 +127,11 @@
         arrows: false,
         autoplay: true,
         animation: 'fade'
+      });
+      $(".scroll").click(function() {
+        $("html, body").animate({
+          scrollTop: $(".summary").offset().top - 80
+        }, "slow");
       });
     </script>
   </body>
