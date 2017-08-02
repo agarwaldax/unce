@@ -25,7 +25,6 @@ $(document).ready(function(){
     var courseDist;
     while(courseDist === undefined)
       courseDist = $("#home .courses").offset().top - $("section.mobNavBar").offset().top;
-    console.log(courseDist);
     if (courseDist < 550 && once) {
       once = false;
       $('.count').each(function () {
