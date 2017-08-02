@@ -22,8 +22,9 @@ $(document).ready(function(){
       $("section.mobNavBar .logo").attr("src", parent + "res/logo-white.svg");
       $("section.mobNavBar .menu").attr("src", parent + "res/menu-white.svg");
     }
-
-    var courseDist = $("#home .courses").offset().top - $("section.mobNavBar").offset().top;
+    var courseDist;
+    while(courseDist === undefined)
+      courseDist = $("#home .courses").offset().top - $("section.mobNavBar").offset().top;
     console.log(courseDist);
     if (courseDist < 550 && once) {
       once = false;

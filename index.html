@@ -122,6 +122,10 @@
     <script src="js/nav.js"></script>
     <script src="js/unslider-min.js"></script>
     <script>
+      if ($('video').attr('autoplay') === undefined) {
+        $('.content header .overlay').css('background', '#154360')
+      }
+      
       $('.slider').unslider({
         nav: false,
         arrows: false,
