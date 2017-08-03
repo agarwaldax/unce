@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UNC Entrepreneurship</title>
 
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/unslider.css" rel="stylesheet">
-
-    <link rel="icon" href="favicon.png">
+    <link href="css/style.css" rel="stylesheet"><link rel="icon" href="favicon.png">
   </head>
   <body>
 
@@ -68,12 +65,7 @@
         <img class="background" src="res/spaces_bkg.jpg">
         <div class="overlay"></div>
         <h3>Spaces</h3>
-        <div class="slider">
-          <ul>
-            <li><img src="res/contact_bkg.jpg" alt="play feed screen"></li>
-            <li><img src="res/activities_bkg.jpg" alt="play feed screen"></li>
-          </ul>
-        </div>
+        <img class="info" src="res/spacesinfo.svg">
         <p>Learn about different locations you can visit on and off campus to get involved on or get
            advice on your next project.</p>
         <a href="spaces.html">Learn More</a>
@@ -114,25 +106,17 @@
       <p>450 Ridge Rd #1213, Chapel Hill, NC 27599</p>
       <p>entrepreneurship@unc.edu</p>
       <p>(919) 962-5401</p>
-      <span class="copyright">Copyright © 2017 UNC Chapel Hill</span><br>
+      <span class="copyright">Copyright © 2017 Jim Kitchen</span><br>
       <span>Developed by Linker Logic Technologies</span>
     </div></footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/unslider-min.js"></script>
     <script>
       if ($('video').get(0).paused) {
         $('video').get(0).play();
         // $('.content header .overlay').css('background', '#154360')
       }
-      
-      $('.slider').unslider({
-        nav: false,
-        arrows: false,
-        autoplay: true,
-        animation: 'fade'
-      });
       $(".scroll").click(function() {
         $("html, body").animate({
           scrollTop: $(".summary").offset().top - 80
